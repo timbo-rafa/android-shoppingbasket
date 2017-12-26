@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="EdgeMargin">10dp</dimen>
+    <dimen name="priceRightMargin">@dimen/EdgeMargin</dimen>
+    <dimen name="btnMargin">5dp</dimen>
+    <dimen name="fragmentItemMargin">20dp</dimen>
+    <dimen name="fragmentItemSpacing">10dp</dimen>
+    <dimen name="HeaderMargin">10dp</dimen>
+    <dimen name="alertTextSize">20dp</dimen>
+    <dimen name="detailsTextSize">10dp</dimen>
+</resources>

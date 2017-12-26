@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/orderId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/fragmentItemMargin"
+        android:layout_marginBottom="@dimen/fragmentItemMargin"
+        android:layout_marginLeft="@dimen/EdgeMargin"
+        android:layout_marginStart="@dimen/EdgeMargin" />
+
+    <TextView
+        android:id="@+id/orderPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/fragmentItemSpacing"
+        android:layout_marginStart="@dimen/fragmentItemSpacing"
+        android:layout_marginTop="@dimen/fragmentItemMargin"
+        android:layout_toRightOf="@id/orderId"
+        android:layout_toEndOf="@id/orderId" />
+
+    <TextView
+        android:id="@+id/orderCustomer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/fragmentItemSpacing"
+        android:layout_marginStart="@dimen/fragmentItemSpacing"
+        android:layout_marginTop="@dimen/fragmentItemMargin"
+        android:layout_toRightOf="@id/orderPrice"
+        android:layout_toEndOf="@id/orderPrice" />
+
+    <TextView
+        android:id="@+id/orderDate"
+        android:textSize="@dimen/detailsTextSize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/fragmentItemSpacing"
+        android:layout_marginStart="@dimen/fragmentItemSpacing"
+        android:layout_marginBottom="@dimen/fragmentItemMargin"
+        android:layout_below="@id/orderCustomer"
+        android:layout_toRightOf="@id/orderId"
+        android:layout_toEndOf="@id/orderId" />
+
+    <TextView
+        android:id="@+id/orderStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/priceRightMargin"
+        android:layout_marginEnd="@dimen/priceRightMargin"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/fragmentItemMargin"
+        android:layout_marginBottom="@dimen/fragmentItemMargin"
+        />
+</RelativeLayout>

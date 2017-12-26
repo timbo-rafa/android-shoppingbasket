@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.rafael.rafaelmatos_MAPD711_OnlinePurchase.ProductDetailsActivity">
+
+    <TextView
+        style="?android:attr/listSeparatorTextViewStyle"
+        android:id="@+id/productDetailsName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/productDetailsCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/productDetailsName"
+        />
+
+    <TextView
+        android:id="@+id/productDetailsPriceTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/productDetailsCategory"
+        android:text="@string/price"
+        android:layout_marginTop="@dimen/HeaderMargin"
+
+        />
+    <TextView
+        android:id="@+id/productDetailsPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/productDetailsCategory"
+        android:layout_toRightOf="@id/productDetailsPriceTag"
+        android:layout_marginTop="@dimen/HeaderMargin"
+        />
+
+    <TextView
+        android:id="@+id/productDetailsCurrentQuantityTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/productDetailsPrice"
+        android:text="@string/currentQuantity"
+        />
+    <TextView
+        android:id="@+id/productDetailsQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/productDetailsPrice"
+        android:layout_toRightOf="@id/productDetailsCurrentQuantityTag"
+        />
+
+    <TextView
+        android:id="@+id/productDetailsNewQuantityTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/newQuantity"
+        android:layout_alignBaseline="@id/productDetailsNewQuantity"
+        android:layout_below="@id/productDetailsCurrentQuantityTag"
+        />
+
+    <EditText
+        android:id="@+id/productDetailsNewQuantity"
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/productDetailsCurrentQuantityTag"
+        android:layout_toRightOf="@id/productDetailsNewQuantityTag"
+        />
+
+    <Button
+        android:id="@+id/addToCartBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/addToCart"
+        android:layout_margin="@dimen/btnMargin"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        />
+</RelativeLayout>

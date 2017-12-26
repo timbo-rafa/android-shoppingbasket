@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.rafael.rafaelmatos_MAPD711_OnlinePurchase.ListOrdersActivity">
+
+    <TextView
+        style="?android:attr/listSeparatorTextViewStyle"
+        android:id="@+id/listOrdersHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/listOrdersHeader"
+        />
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="com.example.rafael.rafaelmatos_MAPD711_OnlinePurchase.OrderFragmentList"
+        android:id="@+id/orderFragment"
+        tools:layout="@layout/list_fragment"
+        android:layout_below="@id/listOrdersHeader"/>
+    <TextView
+        android:id="@+id/noOrdersText"
+        android:textSize="@dimen/alertTextSize"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/noOrders"/>
+    <Button
+        android:id="@+id/viewProductsBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/viewProducts"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/btnMargin"
+        />
+</RelativeLayout>
