@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.rafael.rafaelmatos_MAPD711_OnlinePurchase.SignupActivity">
+    tools:context="com.example.rafael.onlineShopping.SignupActivity">
 
     <TableLayout
         android:id="@+id/loginTable"

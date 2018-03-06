@@ -1,4 +1,4 @@
-package com.example.rafael.rafaelmatos_MAPD711_OnlinePurchase;
+package com.example.rafael.onlineShopping;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.rafael.rafaelmatos_MAPD711_OnlinePurchase", appContext.getPackageName());
+        assertEquals("com.example.rafael.onlineShopping", appContext.getPackageName());
     }
 }

@@ -1,4 +1,4 @@
-package com.example.rafael.rafaelmatos_MAPD711_OnlinePurchase.dummy;
+package com.example.rafael.onlineShopping.dummy;
 
 import java.util.ArrayList;
 import java.util.HashMap;

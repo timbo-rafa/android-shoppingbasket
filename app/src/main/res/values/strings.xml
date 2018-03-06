@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">RafaelMatos_MAPD711_OnlinePurchase</string>
+    <string name="app_name">Online Shopping</string>
 
     // Login Activity
     <string name="login">Login:</string>

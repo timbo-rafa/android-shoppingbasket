@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.rafael.rafaelmatos_MAPD711_OnlinePurchase.ListProductsActivity">
+    tools:context="com.example.rafael.onlineShopping.ListProductsActivity">
 
     <TextView
         style="?android:attr/listSeparatorTextViewStyle"
@@ -15,7 +15,7 @@
     <fragment
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:name="com.example.rafael.rafaelmatos_MAPD711_OnlinePurchase.ProductFragmentList"
+        android:name="com.example.rafael.onlineShopping.ProductFragmentList"
         android:id="@+id/fragment"
         tools:layout="@layout/list_fragment"
         android:layout_marginTop="30dp"

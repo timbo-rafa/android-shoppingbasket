@@ -1,4 +1,4 @@
-package com.example.rafael.rafaelmatos_MAPD711_OnlinePurchase;
+package com.example.rafael.onlineShopping;
 
 import android.app.ListFragment;
 import android.os.Bundle;

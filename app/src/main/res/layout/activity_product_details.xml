@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.rafael.rafaelmatos_MAPD711_OnlinePurchase.ProductDetailsActivity">
+    tools:context="com.example.rafael.onlineShopping.ProductDetailsActivity">
 
     <TextView
         style="?android:attr/listSeparatorTextViewStyle"

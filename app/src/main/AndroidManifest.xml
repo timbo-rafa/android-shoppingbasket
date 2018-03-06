@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.rafael.rafaelmatos_MAPD711_OnlinePurchase">
+    package="com.example.rafael.onlineShopping">
 
     <application
         android:allowBackup="true"
@@ -9,18 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/TimboTheme">
-        <activity android:name="com.example.rafael.rafaelmatos_MAPD711_OnlinePurchase.SignupActivity" />
-        <activity android:name="com.example.rafael.rafaelmatos_MAPD711_OnlinePurchase.LoginActivity">
+        <activity android:name="com.example.rafael.onlineShopping.SignupActivity" />
+        <activity android:name="com.example.rafael.onlineShopping.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.rafael.rafaelmatos_MAPD711_OnlinePurchase.ListOrdersActivity" />
-        <activity android:name="com.example.rafael.rafaelmatos_MAPD711_OnlinePurchase.ListProductsActivity"></activity>
-        <activity android:name="com.example.rafael.rafaelmatos_MAPD711_OnlinePurchase.ProductDetailsActivity" />
-        <activity android:name="com.example.rafael.rafaelmatos_MAPD711_OnlinePurchase.OrderDetailsActivity"></activity>
+        <activity android:name="com.example.rafael.onlineShopping.ListOrdersActivity" />
+        <activity android:name="com.example.rafael.onlineShopping.ListProductsActivity"></activity>
+        <activity android:name="com.example.rafael.onlineShopping.ProductDetailsActivity" />
+        <activity android:name="com.example.rafael.onlineShopping.OrderDetailsActivity"></activity>
     </application>
 
 </manifest>
