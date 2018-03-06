@@ -9,4 +9,6 @@
     <dimen name="HeaderMargin">10dp</dimen>
     <dimen name="alertTextSize">20dp</dimen>
     <dimen name="detailsTextSize">10dp</dimen>
+    <dimen name="textFieldSize">150dp</dimen>
+    <dimen name="btnPaddingTopFromText">50dp</dimen>
 </resources>

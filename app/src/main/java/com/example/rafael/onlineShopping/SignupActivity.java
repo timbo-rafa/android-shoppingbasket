@@ -28,7 +28,7 @@ public class SignupActivity extends AppCompatActivity {
         final EditText address           = (EditText) findViewById(R.id.addressEditText);
         final EditText city              = (EditText) findViewById(R.id.cityEditText);
         final EditText postalCode        = (EditText) findViewById(R.id.postalCodeEditText);
-        final TextView display           = (TextView) findViewById(R.id.display);
+        //final TextView display           = (TextView) findViewById(R.id.display);
 
         final DatabaseManager db = new DatabaseManager(this);
         //db.deleteDatabase(getApplicationContext());

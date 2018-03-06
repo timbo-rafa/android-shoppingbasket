@@ -7,9 +7,9 @@
     tools:context="com.example.rafael.onlineShopping.LoginActivity">
 
     <TableLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
         android:id="@+id/loginTable">
     <TableRow android:gravity="center_horizontal"
         android:layout_marginTop="20dp">
@@ -21,7 +21,7 @@
 
         <EditText
             android:id="@+id/usernameLoginScreen"
-            android:layout_width="200dp"
+            android:layout_width="@dimen/textFieldSize"
             android:layout_height="wrap_content"
             android:singleLine="true"
             />
@@ -41,7 +41,8 @@
             android:layout_height="wrap_content"
             android:singleLine="true"/>
     </TableRow>
-    <TableRow android:gravity="center_horizontal">
+    <TableRow android:gravity="center_horizontal"
+        android:paddingTop="@dimen/btnPaddingTopFromText">
         <Button
             android:id="@+id/loginBtn"
             android:layout_width="wrap_content"
