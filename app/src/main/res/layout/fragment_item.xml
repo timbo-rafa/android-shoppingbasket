@@ -22,8 +22,11 @@
         android:layout_marginStart="@dimen/fragmentItemSpacing"
         android:layout_marginTop="@dimen/fragmentItemMargin"
         android:layout_marginBottom="@dimen/fragmentItemMargin"
+        android:paddingRight="26dp"
+        android:paddingEnd="26dp"
         android:layout_toRightOf="@id/productQuantity"
-        android:layout_toEndOf="@id/productQuantity" />
+        android:layout_toEndOf="@id/productQuantity"
+        />
 
     <TextView
         android:id="@+id/productPrice"
