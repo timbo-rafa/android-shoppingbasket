@@ -12,14 +12,21 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+
 import java.util.Locale;
 
 public class ProductAdapter extends ArrayAdapter<Product> {
 
     public double total = 0;
+    ImageLoader imageLoader;
 
     public ProductAdapter(@NonNull Context context) {
         super(context, 0);
+        this.imageLoader = ImageLoader.getInstance();
+        this.imageLoader.init(ImageLoaderConfiguration.createDefault(getContext()));
     }
 
     @NonNull
@@ -57,7 +64,8 @@ public class ProductAdapter extends ArrayAdapter<Product> {
         tvQuantity.setText(String.valueOf(product.quantity));
         tvPrice.setText(String.format(Locale.CANADA,"$%.2f", product.price * product.quantity));
 
-        new DownloadImageTask().setImageView(ivThumbnail).execute(product.imageUrl);
+        showImage(ivThumbnail, product.imageUrl);
+        //new DownloadImageTask().setImageView(ivThumbnail).execute(product.imageUrl);
 
         //tvQuantity.setVisibility(View.GONE);
 
@@ -65,6 +73,17 @@ public class ProductAdapter extends ArrayAdapter<Product> {
 
         // Return the completed view to render on screen
         return convertView;
+    }
+
+    private void showImage(ImageView view, String imageUrl) {
+        DisplayImageOptions options = new DisplayImageOptions.Builder()//
+            .showImageOnFail(R.drawable.shopping_basket_greyed_out)
+            //.showImageOnLoading(R.drawable.image_placeholder)
+            .showImageForEmptyUri(R.drawable.shopping_basket_greyed_out)
+            .cacheInMemory(true)
+            .cacheOnDisk(false)
+            .build();
+        this.imageLoader.displayImage(imageUrl, view, options);
     }
 
     @Override
