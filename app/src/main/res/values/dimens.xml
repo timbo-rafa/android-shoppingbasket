@@ -13,4 +13,5 @@
     <dimen name="btnPaddingTopFromText">50dp</dimen>
     <dimen name="labelPadding">4dp</dimen>
     <dimen name="halfLabelPadding">2dp</dimen>
+    <dimen name="footerHeight">90dp</dimen>
 </resources>

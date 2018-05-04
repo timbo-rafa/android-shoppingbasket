@@ -67,6 +67,9 @@ public class Product implements Serializable {
         new Product( "4", "Logitech M720 Triathlon Wireless Optical Mouse - Black", 49.99, 0, "Computer Accessories",
             "https://multimedia.bbycastatic.ca/multimedia/products/1500x1500/104/10482/10482681.jpg")
             .addToDatabase();
+        new Product("5", "Google Home Mini - Charcoal", 79.99, 0, "Smart Home",
+            "https://multimedia.bbycastatic.ca/multimedia/products/500x500/116/11615/11615336.jpg")
+            .addToDatabase();
     }
 
     private String[] getRecord() {

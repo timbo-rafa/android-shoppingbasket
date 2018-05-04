@@ -12,7 +12,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DatabaseManager extends SQLiteOpenHelper {
     //
     private static final String DATABASE_NAME = "mapd711.db";
-    private static final int DATABASE_VERSION = 11;
+    private static final int DATABASE_VERSION = 12;
     //
 
     public static final String tables[]={"tbl_customer","tbl_clerk", "tbl_product", "tbl_order"};
