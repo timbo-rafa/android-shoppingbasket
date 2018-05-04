@@ -10,7 +10,7 @@
     <dimen name="alertTextSize">20dp</dimen>
     <dimen name="detailsTextSize">10dp</dimen>
     <dimen name="textFieldSize">150dp</dimen>
-    <dimen name="btnPaddingTopFromText">50dp</dimen>
+    <dimen name="btnPaddingTopFromText">20dp</dimen>
     <dimen name="labelPadding">4dp</dimen>
     <dimen name="halfLabelPadding">2dp</dimen>
     <dimen name="footerHeight">90dp</dimen>

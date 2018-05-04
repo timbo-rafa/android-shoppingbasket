@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Online Shopping</string>
+    <string name="app_name">Shopping Basket</string>
 
     // Login Activity
     <string name="login">Login:</string>
