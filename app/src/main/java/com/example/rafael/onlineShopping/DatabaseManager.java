@@ -12,7 +12,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DatabaseManager extends SQLiteOpenHelper {
     //
     private static final String DATABASE_NAME = "mapd711.db";
-    private static final int DATABASE_VERSION = 10;
+    private static final int DATABASE_VERSION = 11;
     //
 
     public static final String tables[]={"tbl_customer","tbl_clerk", "tbl_product", "tbl_order"};
@@ -29,7 +29,7 @@ public class DatabaseManager extends SQLiteOpenHelper {
                             " firstname TEXT, lastname TEXT, " +
                             " address TEXT, city TEXT, postalCode TEXT);",
                     "CREATE TABLE " + DatabaseManager.tables[PRODUCT] + " (productId INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, price TEXT," +
-                            " quantity INTEGER, category TEXT);",
+                            " quantity INTEGER, category TEXT, imageUrl TEXT);",
                     "CREATE TABLE " + DatabaseManager.tables[ORDER] + " (orderId INTEGER PRIMARY KEY AUTOINCREMENT, " +
                             "customerId INTEGER KEY REFERENCES tbl_customer(customerId), " +
                             "productId INTEGER KEY REFERENCES tbl_product(productId), " +

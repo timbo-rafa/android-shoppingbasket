@@ -36,6 +36,8 @@ public class ProductFragmentList extends ListFragment {
     }
 
     public void update() {
+        // load initial product settings
+        Product.setDb(getActivity());
         ArrayList<Product> dbProducts = Product.fetchProducts();
         this.adapter.clear();
         this.adapter.addAll(dbProducts);
