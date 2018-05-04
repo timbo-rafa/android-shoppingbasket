@@ -36,6 +36,7 @@
         android:layout_marginBottom="@dimen/fragmentItemMargin"
         android:paddingRight="26dp"
         android:paddingEnd="26dp"
+        android:layout_centerVertical="true"
         android:layout_toRightOf="@id/productThumbnail"
         android:layout_toEndOf="@id/productThumbnail"
         />
@@ -50,5 +51,6 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="@dimen/fragmentItemMargin"
         android:layout_marginBottom="@dimen/fragmentItemMargin"
+        android:layout_centerVertical="true"
         />
 </RelativeLayout>
