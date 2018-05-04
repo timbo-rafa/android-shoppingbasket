@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.Locale;
@@ -47,6 +48,7 @@ public class ProductAdapter extends ArrayAdapter<Product> {
         TextView tvName = (TextView) convertView.findViewById(R.id.productName);
         TextView tvQuantity = (TextView) convertView.findViewById(R.id.productQuantity);
         TextView tvPrice = (TextView) convertView.findViewById(R.id.productPrice);
+        ImageView ivThumbnail = (ImageView) convertView.findViewById(R.id.productThumbnail);
 
         // Populate the data into the template view using the data object
         Log.d("rafael.PRODUCT=", product.toString());
@@ -54,7 +56,13 @@ public class ProductAdapter extends ArrayAdapter<Product> {
         tvName.setText(product.name);
         tvQuantity.setText(String.valueOf(product.quantity));
         tvPrice.setText(String.format(Locale.CANADA,"$%.2f", product.price * product.quantity));
+
+        new DownloadImageTask().setImageView(ivThumbnail).execute(product.imageUrl);
+
         //tvQuantity.setVisibility(View.GONE);
+
+
+
         // Return the completed view to render on screen
         return convertView;
     }

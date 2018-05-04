@@ -5,14 +5,26 @@
     android:layout_height="match_parent"
     >
 
+    <ImageView
+        android:id="@+id/productThumbnail"
+        style="@style/thumbnail"
+        android:layout_height="110dp"
+        android:scaleType="fitXY"
+        android:contentDescription="thumbnail" />
+
     <TextView
         android:id="@+id/productQuantity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/fragmentItemMargin"
-        android:layout_marginBottom="@dimen/fragmentItemMargin"
-        android:layout_marginLeft="@dimen/EdgeMargin"
-        android:layout_marginStart="@dimen/EdgeMargin" />
+        android:paddingRight="@dimen/labelPadding"
+        android:paddingLeft="@dimen/labelPadding"
+        android:paddingTop="@dimen/halfLabelPadding"
+        android:paddingBottom="@dimen/halfLabelPadding"
+        android:layout_alignRight="@id/productThumbnail"
+        android:layout_alignBottom="@id/productThumbnail"
+        android:textColor="@color/white"
+        android:background="@color/lightBlack"
+        />
 
     <TextView
         android:id="@+id/productName"
@@ -24,8 +36,8 @@
         android:layout_marginBottom="@dimen/fragmentItemMargin"
         android:paddingRight="26dp"
         android:paddingEnd="26dp"
-        android:layout_toRightOf="@id/productQuantity"
-        android:layout_toEndOf="@id/productQuantity"
+        android:layout_toRightOf="@id/productThumbnail"
+        android:layout_toEndOf="@id/productThumbnail"
         />
 
     <TextView
