@@ -1,4 +1,4 @@
-package com.example.rafael.onlineShopping;
+package com.rafaeltimbo.shoppingbasket;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -62,9 +62,9 @@ public class User {
 
     protected static User queryUserByUsername(String tbl_name, String username) {
         List userList = db.queryTable(tbl_name, "username = ?", new String[]{ username } );
-        Log.d("rafael.timbo.queryUser", userList.toString());
-        Log.d("rafael.timbo.Customers", db.getTable(DatabaseManager.tables[DatabaseManager.CUSTOMER]).toString());
-        Log.d("rafael.timbo.Clerks", db.getTable(DatabaseManager.tables[DatabaseManager.CLERK]).toString());
+        Log.d("rafaeltimbo.timbo.queryUser", userList.toString());
+        Log.d("rafaeltimbo.timbo.Customers", db.getTable(DatabaseManager.tables[DatabaseManager.CUSTOMER]).toString());
+        Log.d("rafaeltimbo.timbo.Clerks", db.getTable(DatabaseManager.tables[DatabaseManager.CLERK]).toString());
         if (userList.isEmpty()) throw new NullPointerException();
         else return new User(
             (List) userList.get(0)
@@ -80,7 +80,7 @@ public class User {
 
     public static User queryCustomerById(String id) {
         List userList = db.queryTable(DatabaseManager.tables[DatabaseManager.CUSTOMER], "customerId = ?", new String[] { id });
-        Log.d("rafael.timbo.customerId", userList.toString());
+        Log.d("rafaeltimbo.timbo.customerId", userList.toString());
         return new User( (List) userList.get(0));
     }
 
@@ -94,13 +94,13 @@ public class User {
 
     public long addToDatabaseClerk() {
         Long id = db.addRecord(new ContentValues(), DatabaseManager.tables[DatabaseManager.CLERK], tbl_clerk_fields, this.getRecord());
-        Log.d("rafael.timbo", "created clerk " + id.toString());
+        Log.d("rafaeltimbo.timbo", "created clerk " + id.toString());
         return id;
     }
 
     public long addToDatabaseCustomer() {
         Long id = db.addRecord(new ContentValues(), DatabaseManager.tables[DatabaseManager.CUSTOMER], tbl_customer_fields, this.getRecord());
-        Log.d("rafael.timbo", "created customer " + id.toString());
+        Log.d("rafaeltimbo.timbo", "created customer " + id.toString());
         return id;
 
     }

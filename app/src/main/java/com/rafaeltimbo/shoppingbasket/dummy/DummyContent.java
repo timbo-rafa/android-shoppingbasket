@@ -1,4 +1,4 @@
-package com.example.rafael.onlineShopping.dummy;
+package com.rafaeltimbo.shoppingbasket.dummy;
 
 import java.util.ArrayList;
 import java.util.HashMap;

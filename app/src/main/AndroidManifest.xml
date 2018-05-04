@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.rafael.onlineShopping">
+    package="com.rafaeltimbo.shoppingbasket">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <application
@@ -10,18 +10,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/TimboTheme">
-        <activity android:name="com.example.rafael.onlineShopping.SignupActivity" />
-        <activity android:name="com.example.rafael.onlineShopping.LoginActivity">
+        <activity android:name="com.rafaeltimbo.shoppingbasket.SignupActivity" />
+        <activity android:name="com.rafaeltimbo.shoppingbasket.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.rafael.onlineShopping.ListOrdersActivity" />
-        <activity android:name="com.example.rafael.onlineShopping.ListProductsActivity"></activity>
-        <activity android:name="com.example.rafael.onlineShopping.ProductDetailsActivity" />
-        <activity android:name="com.example.rafael.onlineShopping.OrderDetailsActivity"></activity>
+        <activity android:name="com.rafaeltimbo.shoppingbasket.ListOrdersActivity" />
+        <activity android:name="com.rafaeltimbo.shoppingbasket.ListProductsActivity"></activity>
+        <activity android:name="com.rafaeltimbo.shoppingbasket.ProductDetailsActivity" />
+        <activity android:name="com.rafaeltimbo.shoppingbasket.OrderDetailsActivity"></activity>
     </application>
 
 </manifest>

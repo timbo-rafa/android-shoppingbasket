@@ -1,4 +1,4 @@
-package com.example.rafael.onlineShopping;
+package com.rafaeltimbo.shoppingbasket;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

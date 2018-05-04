@@ -1,4 +1,4 @@
-package com.example.rafael.onlineShopping;
+package com.rafaeltimbo.shoppingbasket;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;

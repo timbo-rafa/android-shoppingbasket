@@ -1,4 +1,4 @@
-package com.example.rafael.onlineShopping;
+package com.rafaeltimbo.shoppingbasket;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -40,7 +40,7 @@ public class Order {
     }
 
     public Order(Product p, String username) {
-        Log.d("rafael.timbo.Order", username);
+        Log.d("rafaeltimbo.timbo.Order", username);
         Product product = Product.queryProductByName(p.name);
         User user = User.queryCustomerByUsername(username);
         this.id = "0";
@@ -81,10 +81,10 @@ public class Order {
     }
 
     public Order addToDatabase() {
-        Log.d("rafael.timbo", "creating order " + db.toString() + this.toString());
+        Log.d("rafaeltimbo.timbo", "creating order " + db.toString() + this.toString());
 
         Long id = db.addRecord(new ContentValues(), DatabaseManager.tables[DatabaseManager.ORDER], tbl_order_fields, this.getRecord() );
-        Log.d("rafael.timbo", "created order " + id.toString());
+        Log.d("rafaeltimbo.timbo", "created order " + id.toString());
         this.id = id.toString();
         return this;
     }
@@ -111,13 +111,13 @@ public class Order {
     public static ArrayList<Order> fetchOrders(String customerId) {
         List orderList = db.queryTable(DatabaseManager.tables[DatabaseManager.ORDER], "customerId = ?", new String[] { customerId });
 
-        Log.d("rafael.timbo.customerId", orderList.toString());
+        Log.d("rafaeltimbo.timbo.customerId", orderList.toString());
         return convertDbResults(orderList);
     }
 
     public static ArrayList<Order> fetchOrders() {
         List orderList = db.getTable(DatabaseManager.tables[DatabaseManager.ORDER]);
-        Log.d("rafael.timbo.fetchOrder", orderList.size() + ", " + orderList.toString());
+        Log.d("rafaeltimbo.timbo.fetchOrder", orderList.size() + ", " + orderList.toString());
         return convertDbResults(orderList);
     }
 

@@ -1,4 +1,4 @@
-package com.example.rafael.onlineShopping;
+package com.rafaeltimbo.shoppingbasket;
 
 
 import android.content.Context;
@@ -58,7 +58,7 @@ public class ProductAdapter extends ArrayAdapter<Product> {
         ImageView ivThumbnail = (ImageView) convertView.findViewById(R.id.productThumbnail);
 
         // Populate the data into the template view using the data object
-        Log.d("rafael.PRODUCT=", product.toString());
+        Log.d("rafaeltimbo.PRODUCT=", product.toString());
 
         tvName.setText(product.name);
         tvQuantity.setText(String.valueOf(product.quantity));

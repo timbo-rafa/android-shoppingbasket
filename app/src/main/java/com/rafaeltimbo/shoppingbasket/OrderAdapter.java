@@ -1,4 +1,4 @@
-package com.example.rafael.onlineShopping;
+package com.rafaeltimbo.shoppingbasket;
 
 import android.content.Context;
 import android.content.Intent;
@@ -21,7 +21,7 @@ public class OrderAdapter extends ArrayAdapter<Order> {
     public View getView(final int position, View convertView, @NonNull ViewGroup parent) {
         // Get the data item for this position
         final Order order = getItem(position);
-        Log.d("rafael.ORDER=", order.toStringLog());
+        Log.d("rafaeltimbo.ORDER=", order.toStringLog());
 
         User customer = User.queryCustomerById(order.customerId);
         // Check if an existing view is being reused, otherwise inflate the view

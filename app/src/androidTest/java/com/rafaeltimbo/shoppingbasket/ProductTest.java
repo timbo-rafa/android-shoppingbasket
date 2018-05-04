@@ -1,4 +1,4 @@
-package com.example.rafael.onlineShopping;
+package com.rafaeltimbo.shoppingbasket;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -13,7 +13,7 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 /**
- * Created by rafael on 25/12/17.
+ * Created by rafaeltimbo on 25/12/17.
  */
 public class ProductTest {
     DatabaseManager db;
@@ -48,7 +48,7 @@ public class ProductTest {
     @Test
     public void fetchProducts() throws Exception {
         List l = Product.fetchProducts();
-        Log.d("rafael.timbo.fetch", l.toString());
+        Log.d("rafaeltimbo.timbo.fetch", l.toString());
     }
 
 }

@@ -1,4 +1,4 @@
-package com.example.rafael.onlineShopping;
+package com.rafaeltimbo.shoppingbasket;
 
 import android.content.Intent;
 import android.support.annotation.Nullable;
@@ -44,11 +44,11 @@ public class ListProductsActivity extends AppCompatActivity {
              throw new RuntimeException("Username null at placeOrder at ListProductsActivity");
          }
 
-        Log.d("rafael.timbo.username", username);
+        Log.d("rafaeltimbo.timbo.username", username);
 
         for (int i = 0; i < productList.getCount() ; i++) {
             Product product = (Product) productList.getItem(i);
-            Log.d("rafael.timbo.product", product.toString());
+            Log.d("rafaeltimbo.timbo.product", product.toString());
 
             if (product.quantity > 0) {
                 orders.add (

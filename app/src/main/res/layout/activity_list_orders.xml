@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.rafael.onlineShopping.ListOrdersActivity">
+    tools:context="com.rafaeltimbo.shoppingbasket.ListOrdersActivity">
 
     <TextView
         style="?android:attr/listSeparatorTextViewStyle"
@@ -16,7 +16,7 @@
     <fragment
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:name="com.example.rafael.onlineShopping.OrderFragmentList"
+        android:name="com.rafaeltimbo.shoppingbasket.OrderFragmentList"
         android:id="@+id/orderFragment"
         tools:layout="@layout/list_fragment"
         android:layout_below="@id/listOrdersHeader"/>
