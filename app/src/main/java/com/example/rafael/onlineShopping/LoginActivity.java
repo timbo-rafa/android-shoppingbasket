@@ -33,7 +33,7 @@ public class LoginActivity extends AppCompatActivity {
 
             if (login(usernameInput, passwordInput, false)) {
                 // load initial product settings
-                //Product.setDb(getBaseContext());
+                Product.setDb(getBaseContext());
                 Intent listOrders = new Intent(getBaseContext(), ListOrdersActivity.class);
                 startActivity(listOrders);
             }
