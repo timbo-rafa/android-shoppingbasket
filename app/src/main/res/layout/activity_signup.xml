@@ -1,155 +1,161 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.rafaeltimbo.shoppingbasket.SignupActivity">
+    tools:context="com.rafaeltimbo.shoppingbasket.SignupActivity"
+    android:id="@+id/loginTable"
+    android:gravity="center"
+    >
 
-    <TableLayout
-        android:id="@+id/loginTable"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
+    <TableRow android:gravity="center_horizontal"
         >
 
-        <TableRow android:gravity="center_horizontal"
-            >
+        <TextView
+            android:id="@+id/usernameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login" />
 
-            <TextView
-                android:id="@+id/usernameTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/login" />
+        <EditText
+            android:id="@+id/usernameEditText"
+            android:inputType="text"
+            android:digits="@string/alphanumericDotUnderscoreDashDigits"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            />
+    </TableRow>
 
-            <EditText
-                android:id="@+id/usernameEditText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:singleLine="true"
-                />
-        </TableRow>
+    <TableRow android:gravity="center_horizontal">
 
-        <TableRow android:gravity="center_horizontal">
+        <TextView
+            android:id="@+id/passwordTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/password" />
 
-            <TextView
-                android:id="@+id/passwordTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/password" />
-
-            <EditText
-                android:id="@+id/passwordEditText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:singleLine="true"/>
-        </TableRow>
+        <EditText
+            android:id="@+id/passwordEditText"
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"/>
+    </TableRow>
 
 
 
-        <TableRow android:gravity="center_horizontal">
+    <TableRow android:gravity="center_horizontal">
 
-            <TextView
-                android:id="@+id/firstnameTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/firstname" />
+        <TextView
+            android:id="@+id/firstnameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/firstname" />
 
-            <EditText
-                android:id="@+id/firstnameEditText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:singleLine="true"
-                />
-        </TableRow>
+        <EditText
+            android:id="@+id/firstnameEditText"
+            android:inputType="text"
+            android:digits="@string/alphaSpaceDigits"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            />
+    </TableRow>
 
-        <TableRow android:gravity="center_horizontal">
+    <TableRow android:gravity="center_horizontal">
 
-            <TextView
-                android:id="@+id/lastnameTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/lastname" />
+        <TextView
+            android:id="@+id/lastnameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lastname" />
 
-            <EditText
-                android:id="@+id/lastnameEditText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:singleLine="true"
-                />
-        </TableRow>
+        <EditText
+            android:id="@+id/lastnameEditText"
+            android:inputType="text"
+            android:digits="@string/alphaSpaceDigits"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            />
+    </TableRow>
 
-        <TableRow android:gravity="center_horizontal">
+    <TableRow android:gravity="center_horizontal">
 
-            <TextView
-                android:id="@+id/addressTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/address" />
+        <TextView
+            android:id="@+id/addressTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/address" />
 
-            <EditText
-                android:id="@+id/addressEditText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:singleLine="true"
-                />
-        </TableRow>
+        <EditText
+            android:id="@+id/addressEditText"
+            android:inputType="text"
+            android:digits="@string/alphanumericSpaceDigits"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            />
+    </TableRow>
 
-        <TableRow android:gravity="center_horizontal">
+    <TableRow android:gravity="center_horizontal">
 
-            <TextView
-                android:id="@+id/cityTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/city" />
+        <TextView
+            android:id="@+id/cityTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/city" />
 
-            <EditText
-                android:id="@+id/cityEditText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:singleLine="true"
-                />
-        </TableRow>
+        <EditText
+            android:id="@+id/cityEditText"
+            android:inputType="text"
+            android:digits="@string/alphaSpaceDigits"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            />
+    </TableRow>
 
-        <TableRow android:gravity="center_horizontal">
+    <TableRow android:gravity="center_horizontal">
 
-            <TextView
-                android:id="@+id/postalCodeTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/postalCode" />
+        <TextView
+            android:id="@+id/postalCodeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/postalCode" />
 
-            <EditText
-                android:id="@+id/postalCodeEditText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:singleLine="true"
-                />
-        </TableRow>
-        <TableRow
-            android:paddingTop="@dimen/btnPaddingTopFromText"
-            android:gravity="center_horizontal"
-            >
+        <EditText
+            android:id="@+id/postalCodeEditText"
+            android:inputType="text"
+            android:digits="@string/alphanumericSpaceDigits"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            />
+    </TableRow>
+    <TableRow
+        android:paddingTop="@dimen/btnPaddingTopFromText"
+        android:gravity="center_horizontal"
+        >
 
-            <Button
-                android:id="@+id/customerLoginBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/customerLoginBtn" />
-            <Button
-                android:id="@+id/clerkLoginBtn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/clerkLoginBtn" />
-        </TableRow>
+        <Button
+            android:id="@+id/customerLoginBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/customerLoginBtn" />
+        <Button
+            android:id="@+id/clerkLoginBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/clerkLoginBtn" />
+    </TableRow>
 
-        <!--
-        <TableRow>
-            <TextView android:id="@+id/display"
-                android:text="display"/>
-        </TableRow>
-        -->
-
-    </TableLayout>
-</RelativeLayout>
+    <!--
+    <TableRow>
+        <TextView android:id="@+id/display"
+            android:text="display"/>
+    </TableRow>
+    -->
+</TableLayout>
