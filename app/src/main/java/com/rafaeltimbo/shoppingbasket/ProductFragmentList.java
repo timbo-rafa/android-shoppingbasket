@@ -35,9 +35,6 @@ public class ProductFragmentList extends ListFragment {
         setListAdapter(adapter);
 
         this.update();
-        adapter.notifyDataSetChanged();
-        TextView total = getActivity().findViewById(R.id.totalAccumulator);
-        total.setText(String.format(Locale.CANADA, "$%.2f", adapter.total));
     }
 
     public void update() {
@@ -48,5 +45,7 @@ public class ProductFragmentList extends ListFragment {
         this.adapter.clear();
         this.adapter.addAll(dbProducts);
         this.adapter.notifyDataSetChanged();
+        TextView total = getActivity().findViewById(R.id.totalAccumulator);
+        total.setText(String.format(Locale.CANADA, "$%.2f", adapter.total));
     }
 }
