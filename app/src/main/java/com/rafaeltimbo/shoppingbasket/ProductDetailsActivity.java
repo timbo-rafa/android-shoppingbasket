@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,6 +28,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
         TextView price = findViewById(R.id.productDetailsPrice);
         TextView category = findViewById(R.id.productDetailsCategory);
         TextView quantity = findViewById(R.id.productDetailsQuantity);
+        ImageView image = findViewById(R.id.productDetailsImage);
 
         final EditText newQuantity = findViewById(R.id.productDetailsNewQuantity);
 
@@ -34,6 +36,8 @@ public class ProductDetailsActivity extends AppCompatActivity {
         category.setText(product.category);
         price.setText(product.price.toString());
         quantity.setText(product.quantity.toString());
+
+        new ImageDownloader(getApplicationContext()).download(image, product.imageUrl);
 
         addToCartBtn.setOnClickListener(new View.OnClickListener() {
             @Override
