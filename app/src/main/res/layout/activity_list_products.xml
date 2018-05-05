@@ -28,7 +28,8 @@
         android:layout_above="@id/placeOrderBtn"
         android:text="@string/total" />
     <TextView
-        style="?android:listSeparatorTextViewStyle"
+        style="@style/money"
+        android:layout_marginBottom="5dp"
         android:id="@+id/totalAccumulator"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

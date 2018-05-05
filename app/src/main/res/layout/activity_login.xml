@@ -6,12 +6,20 @@
     tools:context="com.rafaeltimbo.shoppingbasket.LoginActivity">
 
     <ImageView
+        android:id="@+id/basketImage"
         android:layout_width="wrap_content"
         android:layout_height="250dp"
         android:src="@drawable/shopping_basket_green"
         android:layout_above="@id/centerLoginScreen"
         android:contentDescription="@string/app_name" />
 
+    <TextView
+        android:id="@+id/appTitle"
+        style="@style/appTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/basketImage"/>
     <View
         android:id="@+id/centerLoginScreen"
         android:layout_width="0dp"
@@ -21,7 +29,7 @@
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/centerLoginScreen"
+        android:layout_below="@id/appTitle"
         android:gravity="center"
         android:id="@+id/loginTable">
     <TableRow android:gravity="center_horizontal"

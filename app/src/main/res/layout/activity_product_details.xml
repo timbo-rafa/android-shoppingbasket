@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,11 +11,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
+    <ImageView
+        android:id="@+id/productDetailsImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/productDetailsName"
+        />
+
     <TextView
         android:id="@+id/productDetailsCategory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/productDetailsName"
+        android:layout_below="@id/productDetailsImage"
+        android:layout_marginLeft="@dimen/text_margin"
         />
 
     <TextView
@@ -26,10 +33,11 @@
         android:layout_below="@id/productDetailsCategory"
         android:text="@string/price"
         android:layout_marginTop="@dimen/HeaderMargin"
-
+        android:layout_marginLeft="@dimen/text_margin"
         />
     <TextView
         android:id="@+id/productDetailsPrice"
+        style="@style/money"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/productDetailsCategory"
@@ -43,6 +51,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/productDetailsPrice"
         android:text="@string/currentQuantity"
+        android:layout_marginLeft="@dimen/text_margin"
         />
     <TextView
         android:id="@+id/productDetailsQuantity"
@@ -59,12 +68,13 @@
         android:text="@string/newQuantity"
         android:layout_alignBaseline="@id/productDetailsNewQuantity"
         android:layout_below="@id/productDetailsCurrentQuantityTag"
+        android:layout_marginLeft="@dimen/text_margin"
         />
 
     <EditText
         android:id="@+id/productDetailsNewQuantity"
         android:inputType="number"
-        android:layout_width="match_parent"
+        android:layout_width="60dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/productDetailsCurrentQuantityTag"
         android:layout_toRightOf="@id/productDetailsNewQuantityTag"

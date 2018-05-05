@@ -10,6 +10,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Locale;
+
 public class ProductDetailsActivity extends AppCompatActivity {
 
     @Override
@@ -34,7 +36,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
 
         name.setText(product.name);
         category.setText(product.category);
-        price.setText(product.price.toString());
+        price.setText(String.format(Locale.CANADA, "$%.2f", product.price));
         quantity.setText(product.quantity.toString());
 
         new ImageDownloader(getApplicationContext()).download(image, product.imageUrl);

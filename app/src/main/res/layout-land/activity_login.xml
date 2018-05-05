@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.rafaeltimbo.shoppingbasket.LoginActivity"
+    android:weightSum="100"
+    >
+
+    <ImageView
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:id="@+id/basketImage"
+        android:layout_weight="50"
+        android:layout_gravity="start"
+        android:src="@drawable/shopping_basket_green"
+        android:layout_marginLeft="@dimen/largeImageMargin"
+        android:contentDescription="@string/app_name" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="50">
+
+        <TextView
+            android:id="@+id/appTitle"
+            style="@style/appTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/TitleMargin"
+            android:layout_alignParentTop="true"/>
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/appTitle"
+            android:gravity="center"
+            android:id="@+id/loginTable">
+            <TableRow android:gravity="center_horizontal">
+
+                <TextView
+                   android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/login" />
+
+                <EditText
+                    android:id="@+id/usernameLoginScreen"
+                    android:layout_width="@dimen/textFieldSize"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    />
+            </TableRow>
+
+            <TableRow android:gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/password" />
+
+                <EditText
+                    android:id="@+id/passwordLoginScreen"
+                    android:inputType="textPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"/>
+            </TableRow>
+            <TableRow android:gravity="center_horizontal"
+                android:paddingTop="@dimen/btnPaddingTopFromText">
+                <Button
+                    android:id="@+id/loginBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/loginBtn" />
+                <Button
+                    android:id="@+id/signupBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/signUpBtn" />
+
+            </TableRow>
+        </TableLayout>
+    </RelativeLayout>
+</LinearLayout>

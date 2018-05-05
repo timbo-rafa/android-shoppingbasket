@@ -25,7 +25,7 @@
 
             <EditText
                 android:id="@+id/usernameEditText"
-                android:layout_width="@dimen/textFieldSize"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:singleLine="true"
                 />
@@ -41,7 +41,7 @@
 
             <EditText
                 android:id="@+id/passwordEditText"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:singleLine="true"/>
         </TableRow>
@@ -58,7 +58,7 @@
 
             <EditText
                 android:id="@+id/firstnameEditText"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:singleLine="true"
                 />
@@ -74,7 +74,7 @@
 
             <EditText
                 android:id="@+id/lastnameEditText"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:singleLine="true"
                 />
@@ -90,7 +90,7 @@
 
             <EditText
                 android:id="@+id/addressEditText"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:singleLine="true"
                 />
@@ -106,7 +106,7 @@
 
             <EditText
                 android:id="@+id/cityEditText"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:singleLine="true"
                 />
@@ -122,7 +122,7 @@
 
             <EditText
                 android:id="@+id/postalCodeEditText"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:singleLine="true"
                 />

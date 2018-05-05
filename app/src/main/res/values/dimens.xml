@@ -14,4 +14,10 @@
     <dimen name="labelPadding">4dp</dimen>
     <dimen name="halfLabelPadding">2dp</dimen>
     <dimen name="footerHeight">90dp</dimen>
+    <dimen name="lineSeparatorHeight">2dp</dimen>
+
+    <dimen name="h1">40dp</dimen>
+    <dimen name="largeImageMargin">30dp</dimen>
+    <dimen name="TitleMargin">20dp</dimen>
+    <dimen name="itemPriceOnRightWidth">60dp</dimen>
 </resources>

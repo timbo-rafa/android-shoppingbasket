@@ -23,7 +23,7 @@
         android:layout_alignRight="@id/productThumbnail"
         android:layout_alignBottom="@id/productThumbnail"
         android:textColor="@color/white"
-        android:background="@color/lightBlack"
+        android:background="@color/secondary"
         />
 
     <TextView
@@ -34,8 +34,8 @@
         android:layout_marginStart="@dimen/fragmentItemSpacing"
         android:layout_marginTop="@dimen/fragmentItemMargin"
         android:layout_marginBottom="@dimen/fragmentItemMargin"
-        android:paddingRight="26dp"
-        android:paddingEnd="26dp"
+        android:paddingRight="@dimen/itemPriceOnRightWidth"
+        android:paddingEnd="@dimen/itemPriceOnRightWidth"
         android:layout_centerVertical="true"
         android:layout_toRightOf="@id/productThumbnail"
         android:layout_toEndOf="@id/productThumbnail"
@@ -43,6 +43,7 @@
 
     <TextView
         android:id="@+id/productPrice"
+        style="@style/money"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="@dimen/priceRightMargin"
