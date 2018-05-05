@@ -12,7 +12,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DatabaseManager extends SQLiteOpenHelper {
     //
     private static final String DATABASE_NAME = "mapd711.db";
-    private static final int DATABASE_VERSION = 13;
+    private static final int DATABASE_VERSION = 14;
     //
 
     public static final String tables[]={"tbl_customer","tbl_clerk", "tbl_product", "tbl_order"};
@@ -52,8 +52,7 @@ public class DatabaseManager extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         // Drop existing tables
-        for (int i=0;i<tables.length;i++)
-            db.execSQL("DROP TABLE IF EXISTS " + tables[i]);
+        for (String table : tables) db.execSQL("DROP TABLE IF EXISTS " + table);
         //create them
         for (int i=0;i<tables.length;i++)
             db.execSQL(tableCreatorString[i]);
@@ -86,8 +85,7 @@ public class DatabaseManager extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         // Drop existing tables
-        for (int i=0;i<tables.length;i++)
-            db.execSQL("DROP TABLE IF EXISTS " + tables[i]);
+        for (String table : tables) db.execSQL("DROP TABLE IF EXISTS " + table);
 
         // Create tables again
         onCreate(db);
@@ -132,6 +130,7 @@ public class DatabaseManager extends SQLiteOpenHelper {
 
             } while (cursor.moveToNext());
         }
+        cursor.close();
 
         // return table as a list
         return table;
@@ -160,6 +159,7 @@ public class DatabaseManager extends SQLiteOpenHelper {
 
             } while (cursor.moveToNext());
         }
+        cursor.close();
 
         // return table as a list
         return table;
