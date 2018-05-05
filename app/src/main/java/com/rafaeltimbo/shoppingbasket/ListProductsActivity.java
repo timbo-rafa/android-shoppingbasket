@@ -25,9 +25,10 @@ public class ListProductsActivity extends AppCompatActivity {
         placeOrderBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-            Intent listOrders = new Intent(ListProductsActivity.this, ListOrdersActivity.class);
+            //Intent listOrders = new Intent(ListProductsActivity.this, ListOrdersActivity.class);
 
-            if (placeOrder()) startActivity(listOrders);
+            if (placeOrder()) onBackPressed();
+                //startActivity(listOrders);
             }
         });
 

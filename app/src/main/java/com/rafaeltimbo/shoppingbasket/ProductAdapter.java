@@ -44,6 +44,7 @@ public class ProductAdapter extends ArrayAdapter<Product> {
                 Intent productDetails = new Intent(getContext(), ProductDetailsActivity.class);
                 productDetails.putExtra("product", product);
                 productDetails.putExtra("productPosition", position);
+                productDetails.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
                 getContext().startActivity(productDetails);
             }
         });

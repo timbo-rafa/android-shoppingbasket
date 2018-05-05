@@ -48,8 +48,9 @@ public class ProductDetailsActivity extends AppCompatActivity {
                     product.quantity = Integer.valueOf(newQuantity.getText().toString());
                     product.updateDatabase();
 
-                    Intent listProducts = new Intent(ProductDetailsActivity.this, ListProductsActivity.class);
-                    startActivity(listProducts);
+                    //Intent listProducts = new Intent(ProductDetailsActivity.this, ListProductsActivity.class);
+                    onBackPressed();
+                    //startActivity(listProducts);
                 } catch (NumberFormatException numberFormatException) {
                     Toast.makeText(getApplicationContext(), "Invalid quantity!", Toast.LENGTH_SHORT).show();
                 }
