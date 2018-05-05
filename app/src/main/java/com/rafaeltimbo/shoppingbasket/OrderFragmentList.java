@@ -36,11 +36,6 @@ public class OrderFragmentList extends ListFragment {
         setListAdapter(adapter);
         this.update();
 
-        TextView noOrdersText = getActivity().findViewById(R.id.noOrdersText);
-        if (adapter.getCount() > 0) {
-            noOrdersText.setVisibility(View.GONE);
-        } else noOrdersText.setVisibility(View.VISIBLE);
-
     }
 
     public void update() {
@@ -53,6 +48,11 @@ public class OrderFragmentList extends ListFragment {
             User customer = User.queryCustomerByUsername( preferences.getString("username", null));
             dbOrders = Order.fetchOrders(customer.id);
         }
+
+        TextView noOrdersText = getActivity().findViewById(R.id.noOrdersText);
+        if (adapter.getCount() > 0) {
+            noOrdersText.setVisibility(View.GONE);
+        } else noOrdersText.setVisibility(View.VISIBLE);
 
         this.adapter.clear();
         this.adapter.addAll(dbOrders);

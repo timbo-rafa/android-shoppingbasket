@@ -27,7 +27,7 @@
     <string name="newQuantity">New quantity:</string>
     <string name="listOrders">List Orders</string>
     <string name="listOrdersHeader">Orders:</string>
-    <string name="noOrders">No orders found</string>
+    <string name="noOrders">No orders found!</string>
     <string name="viewProducts">View Products</string>
     <string name="deliverBtn">Deliver</string>
     <string name="cancelOrderBtn">Cancel Order</string>
