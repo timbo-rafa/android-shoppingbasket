@@ -23,6 +23,12 @@ public class OrderFragmentList extends ListFragment {
     }
 
     @Override
+    public void onResume() {
+        super.onResume();
+        this.update();
+    }
+
+    @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
