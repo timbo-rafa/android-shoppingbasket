@@ -55,8 +55,8 @@ public class Product implements Serializable {
 
     public static void initProducts() {
         db.recreateOneTable(DatabaseManager.PRODUCT);
-        new Product( "1", "Bananas", 0.59, 0, "Fruits",
-            "http://natureandnutrition.com/wp-content/uploads/2015/04/Health-Benefits-of-Bananas.jpg")
+        new Product( "1", "Introduction to Algorithms, Hardcover – Jul 31 2009", 28.67, 0, "Books",
+            "https://images-na.ssl-images-amazon.com/images/I/51fgDX37U7L._SX442_BO1,204,203,200_.jpg")
             .addToDatabase();
         new Product( "2", "Samsung Galaxy S9 64GB", 719.99, 0, "Phones",
             "https://target.scene7.com/is/image/Target/53438666")
