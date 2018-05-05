@@ -90,6 +90,14 @@ public class Product implements Serializable {
         );
     }
 
+    public static Product queryProductById(String id) {
+        List productList = db.queryTable(DatabaseManager.tables[DatabaseManager.PRODUCT], "productId = ?", new String[] { id });
+        return new Product(
+                (List) productList.get(0)
+        );
+    }
+
+
     public void addToDatabase() {
         db.addRecord(new ContentValues(), DatabaseManager.tables[DatabaseManager.PRODUCT], tbl_product_fields, this.getRecord() );
     }

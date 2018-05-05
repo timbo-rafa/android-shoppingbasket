@@ -4,11 +4,13 @@
     <dimen name="EdgeMargin">10dp</dimen>
     <dimen name="priceRightMargin">@dimen/EdgeMargin</dimen>
     <dimen name="btnMargin">5dp</dimen>
-    <dimen name="fragmentItemMargin">20dp</dimen>
-    <dimen name="fragmentItemSpacing">10dp</dimen>
+    <dimen name="fragmentItemOneLineMargin">20dp</dimen>
+    <dimen name="fragmentItemMargin">4dp</dimen>
+    <dimen name="fragmentItemNumberSpacing">10dp</dimen>
+    <dimen name="fragmentItemWordSpacing">75dp</dimen>
     <dimen name="HeaderMargin">10dp</dimen>
     <dimen name="alertTextSize">20dp</dimen>
-    <dimen name="detailsTextSize">10dp</dimen>
+    <dimen name="detailsTextSize">10sp</dimen>
     <dimen name="textFieldSize">150dp</dimen>
     <dimen name="btnPaddingTopFromText">20dp</dimen>
     <dimen name="labelPadding">4dp</dimen>

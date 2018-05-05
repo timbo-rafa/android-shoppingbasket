@@ -21,6 +21,7 @@ public class OrderDetailsActivity extends AppCompatActivity {
         String orderId = getIntent().getStringExtra("order");
         final Order order = Order.queryById(orderId);
         User customer = User.queryCustomerById(order.customerId);
+        Product product = Product.queryProductById(order.productId);
         SharedPreferences preferences = getSharedPreferences("Login", MODE_PRIVATE);
         boolean isClerk = preferences.getBoolean("isClerk", false);
 
@@ -32,6 +33,7 @@ public class OrderDetailsActivity extends AppCompatActivity {
         final TextView datetv = findViewById(R.id.orderDate);
         final TextView statustv = findViewById(R.id.orderStatus);
         final TextView pricetv = findViewById(R.id.orderPrice);
+        final TextView producttv = findViewById(R.id.orderProduct);
 
 
         idtv.setText(order.id);
@@ -39,6 +41,7 @@ public class OrderDetailsActivity extends AppCompatActivity {
         datetv.setText(order.orderDate);
         statustv.setText(order.status.toString());
         pricetv.setText(String.format(Locale.CANADA,"$%5.2f", order.price * order.quantity));
+        producttv.setText(product.name);
 
         //default
         cancelOrderBtn.setVisibility(View.VISIBLE);

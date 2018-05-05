@@ -8,8 +8,8 @@
         android:id="@+id/orderId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/fragmentItemMargin"
-        android:layout_marginBottom="@dimen/fragmentItemMargin"
+        android:layout_marginTop="@dimen/fragmentItemOneLineMargin"
+        android:layout_marginBottom="@dimen/fragmentItemOneLineMargin"
         android:layout_marginLeft="@dimen/EdgeMargin"
         android:layout_marginStart="@dimen/EdgeMargin" />
 
@@ -18,8 +18,8 @@
         style="@style/money"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/fragmentItemSpacing"
-        android:layout_marginStart="@dimen/fragmentItemSpacing"
+        android:layout_marginLeft="@dimen/fragmentItemNumberSpacing"
+        android:layout_marginStart="@dimen/fragmentItemNumberSpacing"
         android:layout_marginTop="@dimen/fragmentItemMargin"
         android:layout_toRightOf="@id/orderId"
         android:layout_toEndOf="@id/orderId" />
@@ -28,23 +28,38 @@
         android:id="@+id/orderCustomer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/fragmentItemSpacing"
-        android:layout_marginStart="@dimen/fragmentItemSpacing"
+        android:layout_marginLeft="@dimen/fragmentItemNumberSpacing"
+        android:layout_marginStart="@dimen/fragmentItemNumberSpacing"
         android:layout_marginTop="@dimen/fragmentItemMargin"
         android:layout_toRightOf="@id/orderPrice"
         android:layout_toEndOf="@id/orderPrice" />
+
+    <TextView
+        android:id="@+id/orderProduct"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/fragmentItemNumberSpacing"
+        android:layout_marginStart="@dimen/fragmentItemNumberSpacing"
+        android:layout_marginRight="@dimen/fragmentItemWordSpacing"
+        android:layout_marginEnd="@dimen/fragmentItemWordSpacing"
+        android:layout_below="@id/orderCustomer"
+        android:layout_toRightOf="@id/orderId"
+        android:layout_toEndOf="@id/orderId"
+        />
 
     <TextView
         android:id="@+id/orderDate"
         android:textSize="@dimen/detailsTextSize"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/fragmentItemSpacing"
-        android:layout_marginStart="@dimen/fragmentItemSpacing"
-        android:layout_marginBottom="@dimen/fragmentItemMargin"
-        android:layout_below="@id/orderCustomer"
+        android:layout_marginLeft="@dimen/fragmentItemNumberSpacing"
+        android:layout_marginStart="@dimen/fragmentItemNumberSpacing"
+        android:layout_below="@id/orderProduct"
         android:layout_toRightOf="@id/orderId"
-        android:layout_toEndOf="@id/orderId" />
+        android:layout_toEndOf="@id/orderId"
+        android:layout_marginBottom="@dimen/fragmentItemMargin"
+        />
 
     <TextView
         android:id="@+id/orderStatus"
@@ -54,7 +69,7 @@
         android:layout_marginEnd="@dimen/priceRightMargin"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="@dimen/fragmentItemMargin"
-        android:layout_marginBottom="@dimen/fragmentItemMargin"
+        android:layout_marginTop="@dimen/fragmentItemOneLineMargin"
+        android:layout_marginBottom="@dimen/fragmentItemOneLineMargin"
         />
 </RelativeLayout>

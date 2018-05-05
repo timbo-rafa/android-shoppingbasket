@@ -24,6 +24,7 @@ public class OrderAdapter extends ArrayAdapter<Order> {
         Log.d("rafaeltimbo.ORDER=", order.toStringLog());
 
         User customer = User.queryCustomerById(order.customerId);
+        Product product = Product.queryProductById(order.productId);
         // Check if an existing view is being reused, otherwise inflate the view
         if (convertView == null) {
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.order_fragment_item, parent, false);
@@ -46,6 +47,7 @@ public class OrderAdapter extends ArrayAdapter<Order> {
         final TextView datetv = convertView.findViewById(R.id.orderDate);
         final TextView statustv = convertView.findViewById(R.id.orderStatus);
         final TextView pricetv = convertView.findViewById(R.id.orderPrice);
+        final TextView producttv = convertView.findViewById(R.id.orderProduct);
 
         // Populate the data into the template view using the data object
         idtv.setText(order.id);
@@ -53,6 +55,7 @@ public class OrderAdapter extends ArrayAdapter<Order> {
         datetv.setText(order.orderDate);
         statustv.setText(order.status.toString());
         pricetv.setText(String.format("$%5.2f", order.price * order.quantity));
+        producttv.setText(product.name);
 
         return convertView;
     }
