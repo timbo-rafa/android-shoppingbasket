@@ -94,8 +94,17 @@ public class Product implements Serializable {
         db.addRecord(new ContentValues(), DatabaseManager.tables[DatabaseManager.PRODUCT], tbl_product_fields, this.getRecord() );
     }
 
-    public void updateDatabase() {
+    private void updateDatabase() {
         db.updateRecord(new ContentValues(), DatabaseManager.tables[DatabaseManager.PRODUCT], tbl_product_fields,  this.getRecord() );
+    }
+
+    public Integer getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(Integer quantity) {
+        this.quantity = quantity;
+        this.updateDatabase();
     }
 
     public static ArrayList<Product> fetchProducts() {

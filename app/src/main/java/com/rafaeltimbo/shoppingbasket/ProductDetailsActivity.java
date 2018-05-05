@@ -45,8 +45,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 try {
-                    product.quantity = Integer.valueOf(newQuantity.getText().toString());
-                    product.updateDatabase();
+                    product.setQuantity( Integer.valueOf(newQuantity.getText().toString()) );
 
                     //Intent listProducts = new Intent(ProductDetailsActivity.this, ListProductsActivity.class);
                     onBackPressed();

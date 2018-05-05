@@ -35,6 +35,13 @@ public class ProductFragmentList extends ListFragment {
         setListAdapter(adapter);
 
         this.update();
+        this.reset();
+    }
+
+    private void reset() {
+        for (int i = 0; i < this.adapter.getCount() ; i++) {
+            this.adapter.getItem(i).setQuantity(0);
+        }
     }
 
     public void update() {
