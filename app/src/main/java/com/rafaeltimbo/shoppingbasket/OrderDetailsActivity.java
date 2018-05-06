@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -60,7 +61,9 @@ public class OrderDetailsActivity extends AppCompatActivity {
         inputQuantityTagtv.setVisibility(View.GONE);
         //idtv.setVisibility(View.VISIBLE);
         orderCustomertv.setVisibility(View.VISIBLE);
-        new ImageDownloader(getApplicationContext()).download(imageiv, product.imageUrl);
+
+        ProgressBar spinningWheel = (ProgressBar) findViewById(R.id.productDetailsProgressBar);
+        new ImageDownloader(getApplicationContext()).download(imageiv, spinningWheel, product.imageUrl);
 
         //default
         cancelOrderBtn.setVisibility(View.VISIBLE);

@@ -4,9 +4,11 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -22,7 +24,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
         Intent getProductDetails = getIntent();
 
         final Product product = (Product) getProductDetails.getSerializableExtra("product");
-        final int productPosition = getProductDetails.getIntExtra("productPosition", 0);
+        //final int productPosition = getProductDetails.getIntExtra("productPosition", 0);
 
         Button addToCartBtn = findViewById(R.id.addToCartBtn);
 
@@ -39,7 +41,8 @@ public class ProductDetailsActivity extends AppCompatActivity {
         price.setText(String.format(Locale.CANADA, "$%.2f", product.price));
         quantity.setText(product.quantity.toString());
 
-        new ImageDownloader(getApplicationContext()).download(image, product.imageUrl);
+        ProgressBar spinningWheel = findViewById(R.id.productDetailsProgressBar);
+        new ImageDownloader(getApplicationContext()).download(image, spinningWheel, product.imageUrl);
 
         addToCartBtn.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -36,6 +36,9 @@
         <item name="android:textColor">@color/green</item>
     </style>
 
+    <style name="progressBar" parent="Widget.AppCompat.ProgressBar">
+    </style>
+
     <style name="money">
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/green</item>

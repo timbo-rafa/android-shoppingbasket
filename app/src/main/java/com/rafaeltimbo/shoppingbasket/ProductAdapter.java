@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
@@ -50,10 +51,10 @@ public class ProductAdapter extends ArrayAdapter<Product> {
         });
 
         // Lookup view for data population
-        TextView tvName = (TextView) convertView.findViewById(R.id.productName);
-        TextView tvQuantity = (TextView) convertView.findViewById(R.id.productQuantity);
-        TextView tvPrice = (TextView) convertView.findViewById(R.id.productPrice);
-        ImageView ivThumbnail = (ImageView) convertView.findViewById(R.id.productThumbnail);
+        TextView tvName = convertView.findViewById(R.id.productName);
+        TextView tvQuantity = convertView.findViewById(R.id.productQuantity);
+        TextView tvPrice = convertView.findViewById(R.id.productPrice);
+        ImageView ivThumbnail = convertView.findViewById(R.id.productThumbnail);
 
         // Populate the data into the template view using the data object
         Log.d("rafaeltimbo.PRODUCT=", product.toString());
@@ -62,7 +63,8 @@ public class ProductAdapter extends ArrayAdapter<Product> {
         tvQuantity.setText(String.valueOf(product.quantity));
         tvPrice.setText(String.format(Locale.CANADA,"$%.2f", product.price * product.quantity));
 
-        new ImageDownloader(getContext()).download(ivThumbnail, product.imageUrl);
+        ProgressBar spinningWheel = convertView.findViewById(R.id.productProgressBar);
+        new ImageDownloader(getContext()).download(ivThumbnail, spinningWheel, product.imageUrl);
         //new DownloadImageTask().setImageView(ivThumbnail).execute(product.imageUrl);
 
         //tvQuantity.setVisibility(View.GONE);

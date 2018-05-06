@@ -29,11 +29,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
+    <ProgressBar
+        android:id="@+id/productDetailsProgressBar"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/productDetailsName"
+        />
+
     <ImageView
         android:id="@+id/productDetailsImage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/productDetailsName"
+        android:layout_below="@id/productDetailsProgressBar"
         />
 
     <TextView
