@@ -10,7 +10,7 @@
         style="@style/thumbnail"
         android:layout_height="110dp"
         android:scaleType="fitXY"
-        android:contentDescription="thumbnail" />
+        android:contentDescription="@string/thumbnail" />
 
     <TextView
         android:id="@+id/productQuantity"
