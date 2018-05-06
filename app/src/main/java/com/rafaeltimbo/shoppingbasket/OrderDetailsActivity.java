@@ -31,19 +31,22 @@ public class OrderDetailsActivity extends AppCompatActivity {
         final Button deliverBtn = findViewById(R.id.deliverBtn);
         final Button cancelOrderBtn = findViewById(R.id.cancelOrderBtn);
 
-        final ImageView imageiv = findViewById(R.id.productDetailsImage);
+        ImageView imageiv = findViewById(R.id.productDetailsImage);
         //final TextView idtv = findViewById(R.id.productDetailsOrderId);
-        final TextView orderCustomertv;// = findViewById(R.id.productDetailsCustomer);
-        final TextView datetv = findViewById(R.id.productDetailsOrderDate);
+        TextView orderCustomertv;// = findViewById(R.id.productDetailsCustomer);
+        TextView datetv = findViewById(R.id.productDetailsOrderDate);
         final TextView statustv = findViewById(R.id.productDetailsStatus);
-        final TextView pricetv = findViewById(R.id.productDetailsPrice);
-        final TextView producttv = findViewById(R.id.productDetailsName);
-        final TextView categorytv = findViewById(R.id.productDetailsCategory);
+        TextView pricetv = findViewById(R.id.productDetailsPrice);
+        TextView producttv = findViewById(R.id.productDetailsName);
+        TextView categorytv = findViewById(R.id.productDetailsCategory);
 
-        final TextView currentQuantitytv = findViewById(R.id.productDetailsCurrentQuantityTag);
-        final TextView quantitytv = findViewById(R.id.productDetailsQuantity);
-        final TextView newQuantityTagtv = findViewById(R.id.productDetailsNewQuantityTag);
-        final TextView inputQuantityTagtv = findViewById(R.id.productDetailsNewQuantity);
+        TextView currentQuantitytv = findViewById(R.id.productDetailsCurrentQuantityTag);
+        TextView quantitytv = findViewById(R.id.productDetailsQuantity);
+        TextView newQuantityTagtv = findViewById(R.id.productDetailsNewQuantityTag);
+        TextView inputQuantityTagtv = findViewById(R.id.productDetailsNewQuantity);
+
+        Button addToCartBtn = findViewById(R.id.addToCartBtn);
+        addToCartBtn.setVisibility(View.GONE);
 
         orderCustomertv = categorytv;
 
@@ -56,6 +59,7 @@ public class OrderDetailsActivity extends AppCompatActivity {
         pricetv.setText(String.format(Locale.CANADA,"$%5.2f", order.price * order.quantity));
         producttv.setText(order.id + " - " + product.name);
 
+        //differ from default ProductDetails screen
         currentQuantitytv.setText(getString(R.string.amountPurchased));
         quantitytv.setText(order.quantity.toString());
         newQuantityTagtv.setVisibility(View.GONE);
@@ -63,7 +67,7 @@ public class OrderDetailsActivity extends AppCompatActivity {
         //idtv.setVisibility(View.VISIBLE);
         orderCustomertv.setVisibility(View.VISIBLE);
 
-        ProgressBar spinningWheel = (ProgressBar) findViewById(R.id.productDetailsProgressBar);
+        ProgressBar spinningWheel = findViewById(R.id.productDetailsProgressBar);
         new ImageDownloader(getApplicationContext()).download(imageiv, spinningWheel, product.imageUrl);
 
         //default
