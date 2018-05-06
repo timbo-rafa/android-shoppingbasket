@@ -5,29 +5,23 @@
     android:layout_height="match_parent"
     tools:context="com.rafaeltimbo.shoppingbasket.ProductDetailsActivity">
 
-    <TextView
-        style="?android:attr/listSeparatorTextViewStyle"
-        android:id="@+id/productDetailsCustomer"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:visibility="gone"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
+    <!--
     <TextView
         style="?android:attr/listSeparatorTextViewStyle"
         android:id="@+id/productDetailsOrderId"
         android:visibility="gone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+    -->
 
     <TextView
         style="?android:attr/listSeparatorTextViewStyle"
         android:id="@+id/productDetailsName"
-        android:layout_toRightOf="@id/productDetailsOrderId"
-        android:layout_toEndOf="@id/productDetailsOrderId"
+        android:paddingTop="@dimen/HeaderMargin"
+        android:paddingBottom="@dimen/HeaderMargin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
 
     <ProgressBar
         android:id="@+id/productDetailsProgressBar"
@@ -43,6 +37,19 @@
         android:layout_below="@id/productDetailsProgressBar"
         />
 
+    <TextView
+        android:id="@+id/productDetailsStatus"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:visibility="gone"
+        android:layout_marginRight="@dimen/text_margin"
+        android:layout_marginEnd="@dimen/text_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/productDetailsImage"
+        android:layout_above="@id/addToCartBtn"
+        />
     <TextView
         android:id="@+id/productDetailsCategory"
         android:layout_width="wrap_content"

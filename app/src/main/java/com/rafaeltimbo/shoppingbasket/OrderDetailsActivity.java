@@ -32,10 +32,10 @@ public class OrderDetailsActivity extends AppCompatActivity {
         final Button cancelOrderBtn = findViewById(R.id.cancelOrderBtn);
 
         final ImageView imageiv = findViewById(R.id.productDetailsImage);
-        final TextView idtv = findViewById(R.id.productDetailsOrderId);
-        final TextView orderCustomertv = findViewById(R.id.productDetailsCustomer);
+        //final TextView idtv = findViewById(R.id.productDetailsOrderId);
+        final TextView orderCustomertv;// = findViewById(R.id.productDetailsCustomer);
         final TextView datetv = findViewById(R.id.productDetailsOrderDate);
-        final TextView statustv;// = findViewById(R.id.orderStatus);
+        final TextView statustv = findViewById(R.id.productDetailsStatus);
         final TextView pricetv = findViewById(R.id.productDetailsPrice);
         final TextView producttv = findViewById(R.id.productDetailsName);
         final TextView categorytv = findViewById(R.id.productDetailsCategory);
@@ -45,11 +45,12 @@ public class OrderDetailsActivity extends AppCompatActivity {
         final TextView newQuantityTagtv = findViewById(R.id.productDetailsNewQuantityTag);
         final TextView inputQuantityTagtv = findViewById(R.id.productDetailsNewQuantity);
 
-        statustv = categorytv;
+        orderCustomertv = categorytv;
 
-        idtv.setText(order.id);
+        //idtv.setText(order.id);
         orderCustomertv.setText(customer.fullName());
         datetv.setText(order.orderDate);
+        statustv.setVisibility(View.VISIBLE);
         statustv.setText(order.status.toString());
         statustv.setTypeface(null, Typeface.BOLD);
         pricetv.setText(String.format(Locale.CANADA,"$%5.2f", order.price * order.quantity));
