@@ -39,7 +39,7 @@
     <string name="alphanumericDotUnderscoreDashDigits">0,1,2,3,4,5,6,7,8,9,QWERTYUIOPASDFGHJKLZXCVBNM,qwertzuiopasdfghjklyxcvbnm,.,_,-</string>
     <string name="alphanumericDotUnderscoreDashSpaceDigits">0,1,2,3,4,5,6,7,8,9,QWERTYUIOPASDFGHJKLZXCVBNM,qwertzuiopasdfghjklyxcvbnm, ,.,_,-</string>
     <string name="alphaDigits">qwertzuiopasdfghjklyxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM</string>
-    <string name="alphaSpaceDigits">qwertzuiopasdfghjklyxcvbnm QWERTYUIOPASDFGHJKLZXCVBNM</string>
+    <string name="alphaSpaceDigits">qwertzuiopasdfghjklyxcvbnm QWERTYUIOPASDFGHJKLZXCVBNMó</string>
     <string name="alphanumericSpaceDigits">qwertzuiopasdfghjklyxcvbnm QWERTYUIOPASDFGHJKLZXCVBNM012345689</string>
     <string name="alphaHint">Only letters allowed</string>
     <string name="amountPurchased">Amount purchased:</string>
