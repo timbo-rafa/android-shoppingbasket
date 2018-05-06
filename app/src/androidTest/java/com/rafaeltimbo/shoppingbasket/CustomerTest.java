@@ -428,61 +428,31 @@ public class CustomerTest {
 
         ViewInteraction button8 = onView(
                 allOf(withId(R.id.addToCartBtn),
-                        childAtPosition(
-                                childAtPosition(
-                                        withId(android.R.id.content),
-                                        0),
-                                9),
                         isDisplayed()));
         button8.check(matches(isDisplayed()));
 
         ViewInteraction textView9 = onView(
                 allOf(withId(R.id.productDetailsQuantity), withText("0"),
-                        childAtPosition(
-                                childAtPosition(
-                                        withId(android.R.id.content),
-                                        0),
-                                6),
                         isDisplayed()));
         textView9.check(matches(withText("0")));
 
         ViewInteraction appCompatEditText19 = onView(
                 allOf(withId(R.id.productDetailsNewQuantity),
-                        childAtPosition(
-                                childAtPosition(
-                                        withId(android.R.id.content),
-                                        0),
-                                8),
                         isDisplayed()));
         appCompatEditText19.perform(click());
 
         ViewInteraction appCompatEditText20 = onView(
                 allOf(withId(R.id.productDetailsNewQuantity),
-                        childAtPosition(
-                                childAtPosition(
-                                        withId(android.R.id.content),
-                                        0),
-                                8),
                         isDisplayed()));
         appCompatEditText20.perform(replaceText("3"), closeSoftKeyboard());
 
         ViewInteraction appCompatEditText21 = onView(
                 allOf(withId(R.id.productDetailsNewQuantity), withText("3"),
-                        childAtPosition(
-                                childAtPosition(
-                                        withId(android.R.id.content),
-                                        0),
-                                8),
                         isDisplayed()));
         appCompatEditText21.perform(pressImeActionButton());
 
         ViewInteraction appCompatButton5 = onView(
                 allOf(withId(R.id.addToCartBtn), withText("Add to cart"),
-                        childAtPosition(
-                                childAtPosition(
-                                        withId(android.R.id.content),
-                                        0),
-                                9),
                         isDisplayed()));
         appCompatButton5.perform(click());
 
@@ -594,41 +564,21 @@ public class CustomerTest {
 
         ViewInteraction appCompatEditText22 = onView(
                 allOf(withId(R.id.productDetailsNewQuantity),
-                        childAtPosition(
-                                childAtPosition(
-                                        withId(android.R.id.content),
-                                        0),
-                                8),
                         isDisplayed()));
         appCompatEditText22.perform(click());
 
         ViewInteraction appCompatEditText23 = onView(
                 allOf(withId(R.id.productDetailsNewQuantity),
-                        childAtPosition(
-                                childAtPosition(
-                                        withId(android.R.id.content),
-                                        0),
-                                8),
                         isDisplayed()));
         appCompatEditText23.perform(replaceText("4"), closeSoftKeyboard());
 
         ViewInteraction appCompatEditText24 = onView(
                 allOf(withId(R.id.productDetailsNewQuantity), withText("4"),
-                        childAtPosition(
-                                childAtPosition(
-                                        withId(android.R.id.content),
-                                        0),
-                                8),
                         isDisplayed()));
         appCompatEditText24.perform(pressImeActionButton());
 
         ViewInteraction appCompatButton8 = onView(
                 allOf(withId(R.id.addToCartBtn), withText("Add to cart"),
-                        childAtPosition(
-                                childAtPosition(
-                                        withId(android.R.id.content),
-                                        0),
-                                9),
                         isDisplayed()));
         appCompatButton8.perform(click());
 
@@ -656,11 +606,6 @@ public class CustomerTest {
 
         ViewInteraction appCompatButton9 = onView(
                 allOf(withId(R.id.placeOrderBtn), withText("Place Order"),
-                        childAtPosition(
-                                childAtPosition(
-                                        withId(android.R.id.content),
-                                        0),
-                                4),
                         isDisplayed()));
         appCompatButton9.perform(click());
 
@@ -696,13 +641,7 @@ public class CustomerTest {
         */
 
         ViewInteraction textView21 = onView(
-                allOf(withId(R.id.orderCustomer), withText("Rafael Timbo"),
-                        childAtPosition(
-                                allOf(withId(R.id.includedLayout),
-                                        childAtPosition(
-                                                IsInstanceOf.<View>instanceOf(android.widget.RelativeLayout.class),
-                                                0)),
-                                2),
+                allOf(withId(R.id.productDetailsCategory), withText("Rafael Timbo"),
                         isDisplayed()));
         textView21.check(matches(withText("Rafael Timbo")));
 
