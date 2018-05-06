@@ -20,7 +20,8 @@
         android:name="com.rafaeltimbo.shoppingbasket.ProductFragmentList"
         android:id="@+id/fragment"
         tools:layout="@layout/list_fragment"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="37dp"
+        android:layout_marginBottom="36dp"
         />
     <TextView
         style="?android:listSeparatorTextViewStyle"

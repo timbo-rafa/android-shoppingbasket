@@ -21,7 +21,9 @@
         android:name="com.rafaeltimbo.shoppingbasket.OrderFragmentList"
         android:id="@+id/orderFragment"
         tools:layout="@layout/list_fragment"
-        android:layout_below="@id/listOrdersHeader"/>
+        android:layout_below="@id/listOrdersHeader"
+        android:layout_marginBottom="10dp"
+        />
     <TextView
         android:id="@+id/noOrdersText"
         android:textSize="@dimen/alertTextSize"
