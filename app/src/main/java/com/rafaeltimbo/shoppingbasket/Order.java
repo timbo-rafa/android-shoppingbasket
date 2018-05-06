@@ -4,8 +4,10 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.util.Log;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
@@ -47,7 +49,10 @@ public class Order {
         this.customerId = user.id;
         this.productId = product.id;
         this.employeeId = "0"; // arbitrary employee id
-        this.orderDate = Calendar.getInstance().getTime().toString();
+        //SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:MM");
+        Date now = Calendar.getInstance().getTime();
+        String date = now.toString();
+        this.orderDate = date;
         this.status = Status.Processing;
         this.price = product.price;
         this.quantity = product.quantity;
