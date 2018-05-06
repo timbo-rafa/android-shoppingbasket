@@ -49,13 +49,13 @@ public class OrderFragmentList extends ListFragment {
             dbOrders = Order.fetchOrders(customer.id);
         }
 
+        this.adapter.clear();
+        this.adapter.addAll(dbOrders);
+        this.adapter.notifyDataSetChanged();
+
         TextView noOrdersText = getActivity().findViewById(R.id.noOrdersText);
         if (adapter.getCount() > 0) {
             noOrdersText.setVisibility(View.GONE);
         } else noOrdersText.setVisibility(View.VISIBLE);
-
-        this.adapter.clear();
-        this.adapter.addAll(dbOrders);
-        this.adapter.notifyDataSetChanged();
     }
 }
