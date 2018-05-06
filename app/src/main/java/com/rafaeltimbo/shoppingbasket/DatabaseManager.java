@@ -11,8 +11,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DatabaseManager extends SQLiteOpenHelper {
     //
-    private static final String DATABASE_NAME = "mapd711.db";
-    private static final int DATABASE_VERSION = 15;
+    private static final String DATABASE_NAME = "com.rafaeltimbo.shoppingbasket";
+    private static final int DATABASE_VERSION = 17;
     //
 
     public static final String tables[]={"tbl_customer","tbl_clerk", "tbl_product", "tbl_order"};

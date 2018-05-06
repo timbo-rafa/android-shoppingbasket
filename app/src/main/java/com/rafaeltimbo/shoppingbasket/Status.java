@@ -5,12 +5,12 @@ public enum Status {
 
     @Override
     public String toString() {
-        if (this == Delivery) return "Delivery";
+        if (this == Delivery) return "Delivered";
         else                  return "Processing";
     }
 
     public static Status fromString(String string) {
-        if (string.toLowerCase().equals("delivery")) return Delivery;
+        if (string.toLowerCase().equals("delivered")) return Delivery;
         else                                        return Processing;
 
     }

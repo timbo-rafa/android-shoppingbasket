@@ -83,6 +83,7 @@ public class OrderDetailsActivity extends AppCompatActivity {
         if (order.status == Status.Delivery) {
             deliverBtn.setEnabled(false);
             cancelOrderBtn.setEnabled(false);
+            cancelOrderBtn.setText(getResources().getString(R.string.itemDeliveredUserInfo));
         }
 
         deliverBtn.setOnClickListener(new View.OnClickListener() {

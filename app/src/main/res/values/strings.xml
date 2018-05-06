@@ -29,10 +29,12 @@
     <string name="listOrdersHeader">Orders:</string>
     <string name="noOrders">No orders found!</string>
     <string name="viewProducts">View Products</string>
-    <string name="deliverBtn">Deliver</string>
+    <string name="deliverBtn">Confirm delivery</string>
     <string name="cancelOrderBtn">Cancel Order</string>
     <string name="canceled">Canceled</string>
-    <string name="onItsWay">On its way!</string>
+    <string name="onItsWay">Delivery confirmed!</string>
+    <string name="itemDeliveredUserInfo">Item delivered</string>
+    <!-- also check Status class -->
 
     <!-- Input Digits and Hints -->
     <string name="alphanumericDotUnderscoreDashHint">Only letters, digits, ., _ and - allowed</string>
