@@ -7,9 +7,9 @@
     tools:context="com.rafaeltimbo.shoppingbasket.OrderDetailsActivity">
 
     <include
-        layout="@layout/order_fragment_item"
+        layout="@layout/activity_product_details"
         android:id="@+id/includedLayout"
-        ></include>
+        />
 
     <Button
         android:id="@+id/cancelOrderBtn"

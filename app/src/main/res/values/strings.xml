@@ -42,5 +42,6 @@
     <string name="alphaSpaceDigits">qwertzuiopasdfghjklyxcvbnm QWERTYUIOPASDFGHJKLZXCVBNM</string>
     <string name="alphanumericSpaceDigits">qwertzuiopasdfghjklyxcvbnm QWERTYUIOPASDFGHJKLZXCVBNM012345689</string>
     <string name="alphaHint">Only letters allowed</string>
+    <string name="amountPurchased">Amount purchased:</string>
 
 </resources>
